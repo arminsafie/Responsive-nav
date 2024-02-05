@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css"
+    />
+    <script
+      src="./assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="./assets/js/app.js" defer></script>
+    <title>phone nav bar</title>
+    <style>
+      .bg-eee {
+        background-color: #eee;
+      }
+      .phone-nav-pose {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        width: 100vw;
+      }
+      .phone-nav-item {
+        transition: all 0.3s;
+      }
+      .phone-nav-item:hover {
+        color: #253a56;
+        transform: scale(1.1);
+      }
+      .phone-hidden-part-menu {
+        position: absolute;
+        background-image: linear-gradient(to right bottom, #1a2b41, #386bae);
+        top: 0;
+        bottom: 12%;
+        left: 0;
+        right: 0;
+        z-index: 100000;
+      }
+      .phone-hidden-item {
+        color: #fff;
+        font-size: 1.1rem;
+        transition: all 0.4s;
+      }
+      .phone-hidden-item:hover {
+        transform: scale(1.1) skewX(-10deg);
+      }
+      .phone-hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="phone-hidden-part-menu phone-hidden" id="phone-hidden">
+          <ul
+            class="list-unstyled d-flex flex-column mt-5 gap-3 align-items-center"
+          >
+            <span class="py-2 phone-hidden-item">
+              برندهای مختلف گوشی موبایل</span
+            >
+            <span class="py-2 phone-hidden-item">گوشی براساس قیمت</span>
+            <span class="py-2 phone-hidden-item">گوشی براساس عملکرد</span>
+            <span class="py-2 phone-hidden-item">گوشی براساس حافظه داخلی</span>
+            <span class="py-2 phone-hidden-item">رزولوشن عکس</span>
+            <span class="py-2 phone-hidden-item">لوازم جانبی موبایل</span>
+            <span class="py-2 phone-hidden-item">تبلت</span>
+            <span class="py-2 phone-hidden-item">ساعت و مچ بند هوشمند</span>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row phone-nav-pose">
+        <div class="col-md-12">
+          <div class="phone-hidden-part-menu phone-hidden" id="phone-hidden">
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <span class="py-2 phone-hidden-item">
+                برندهای مختلف گوشی موبایل</span
+              >
+              <span class="py-2 phone-hidden-item">گوشی براساس قیمت</span>
+              <span class="py-2 phone-hidden-item">گوشی براساس عملکرد</span>
+              <span class="py-2 phone-hidden-item"
+                >گوشی براساس حافظه داخلی</span
+              >
+              <span class="py-2 phone-hidden-item">رزولوشن عکس</span>
+              <span class="py-2 phone-hidden-item">لوازم جانبی موبایل</span>
+              <span class="py-2 phone-hidden-item">تبلت</span>
+              <span class="py-2 phone-hidden-item">ساعت و مچ بند هوشمند</span>
+            </ul>
+          </div>
+          <nav class="nav-bar">
+            <ul
+              class="d-flex m-0 list-unstyled rounded gap-2 p-0 bg-eee vw-100 justify-content-center align-items-center"
+            >
+              <li
+                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
+              >
+                <span class="material-symbols-outlined"> home </span>
+                <span>خانه</span>
+              </li>
+              <li
+                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
+                id="phone-nav-btn"
+              >
+                <span class="material-symbols-outlined"> category </span>
+                <span>دسته بندی</span>
+              </li>
+              <li
+                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
+              >
+                <span class="material-symbols-outlined"> shopping_cart </span>
+                <span>سبد خرید</span>
+              </li>
+              <li
+                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
+              >
+                <span class="material-symbols-outlined"> person </span>
+                <span>پروفایل</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
