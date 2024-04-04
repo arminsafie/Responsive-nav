@@ -27,6 +27,7 @@
         left: 0%;
         right: 0%;
         width: 100vw;
+        z-index: 999999;
       }
       .phone-nav-item {
         transition: all 0.3s;
@@ -36,21 +37,22 @@
         transform: scale(1.1);
       }
       .phone-hidden-part-menu {
-        position: absolute;
+        position: fixed;
         background-image: linear-gradient(to right bottom, #1a2b41, #386bae);
         top: 0;
-        bottom: 12%;
+        bottom: 0%;
         left: 0;
         right: 0;
-        z-index: 100000;
+        z-index: 1000;
       }
       .phone-hidden-item {
         color: #fff;
         font-size: 1.1rem;
         transition: all 0.4s;
+        cursor: pointer;
       }
       .phone-hidden-item:hover {
-        transform: scale(1.1) skewX(-10deg);
+        transform: scale(1.1);
       }
       .phone-hidden {
         display: none;
