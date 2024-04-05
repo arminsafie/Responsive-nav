@@ -38,13 +38,20 @@
       }
       .phone-hidden-part-menu {
         position: fixed;
-        background-image: linear-gradient(to right bottom, #1a2b41, #386bae);
-        top: 0;
+        background: red;
+        top: 5%;
         bottom: 0%;
         left: 0;
         right: 0;
         z-index: 1000;
+        transform: translateY(-100vh);
+        transition: all 0.4s;
       }
+
+      .phone-hidden-part-menu--active {
+        transform: translateY(0) !important;
+      }
+
       .phone-hidden-item {
         color: #fff;
         font-size: 1.1rem;
@@ -60,72 +67,96 @@
     </style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid phone-show">
       <div class="row">
-        <div class="phone-hidden-part-menu phone-hidden" id="phone-hidden">
+        <div class="phone-hidden-part-menu" id="phone-hidden">
           <ul
             class="list-unstyled d-flex flex-column mt-5 gap-3 align-items-center"
           >
-            <span class="py-2 phone-hidden-item">
-              برندهای مختلف گوشی موبایل</span
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
             >
-            <span class="py-2 phone-hidden-item">گوشی براساس قیمت</span>
-            <span class="py-2 phone-hidden-item">گوشی براساس عملکرد</span>
-            <span class="py-2 phone-hidden-item">گوشی براساس حافظه داخلی</span>
-            <span class="py-2 phone-hidden-item">رزولوشن عکس</span>
-            <span class="py-2 phone-hidden-item">لوازم جانبی موبایل</span>
-            <span class="py-2 phone-hidden-item">تبلت</span>
-            <span class="py-2 phone-hidden-item">ساعت و مچ بند هوشمند</span>
+              برندهای مختلف گوشی موبایل</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >گوشی براساس قیمت</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >گوشی براساس عملکرد</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >گوشی براساس حافظه داخلی</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >رزولوشن عکس</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >لوازم جانبی موبایل</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >تبلت</a
+            >
+            <a
+              href="./page/products.html"
+              class="py-2 text-white phone-hidden-item"
+              >ساعت و مچ بند هوشمند</a
+            >
           </ul>
         </div>
       </div>
-
       <div class="row phone-nav-pose">
         <div class="col-md-12">
-          <div class="phone-hidden-part-menu phone-hidden" id="phone-hidden">
-            <ul class="list-unstyled d-flex flex-column align-items-center">
-              <span class="py-2 phone-hidden-item">
-                برندهای مختلف گوشی موبایل</span
-              >
-              <span class="py-2 phone-hidden-item">گوشی براساس قیمت</span>
-              <span class="py-2 phone-hidden-item">گوشی براساس عملکرد</span>
-              <span class="py-2 phone-hidden-item"
-                >گوشی براساس حافظه داخلی</span
-              >
-              <span class="py-2 phone-hidden-item">رزولوشن عکس</span>
-              <span class="py-2 phone-hidden-item">لوازم جانبی موبایل</span>
-              <span class="py-2 phone-hidden-item">تبلت</span>
-              <span class="py-2 phone-hidden-item">ساعت و مچ بند هوشمند</span>
-            </ul>
-          </div>
           <nav class="nav-bar">
             <ul
-              class="d-flex m-0 list-unstyled rounded gap-2 p-0 bg-eee vw-100 justify-content-center align-items-center"
+              class="d-flex m-0 list-unstyled gap-2 p-0 bg-eee gap-3 vw-100 justify-content-center align-items-center"
+              id="phone-nav-bar"
             >
-              <li
-                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
-              >
-                <span class="material-symbols-outlined"> home </span>
-                <span>خانه</span>
+              <li>
+                <a
+                  class="py-3 phone-nav-item fs-6 btn d-flex align-items-center flex-column"
+                  href="./index.html"
+                >
+                  <span class="material-symbols-outlined"> home </span>
+                  <span>خانه</span>
+                </a>
               </li>
               <li
-                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
+                class="py-3 phone-nav-item btn fs-6 d-flex align-items-center flex-column"
                 id="phone-nav-btn"
               >
                 <span class="material-symbols-outlined"> category </span>
                 <span>دسته بندی</span>
               </li>
-              <li
-                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
-              >
-                <span class="material-symbols-outlined"> shopping_cart </span>
-                <span>سبد خرید</span>
+              <li>
+                <a
+                  class="py-3 phone-nav-item btn fs-6 d-flex align-items-center flex-column"
+                  href="./page/cartFull.html"
+                >
+                  <span class="material-symbols-outlined"> shopping_cart </span>
+                  <span>سبد خرید</span>
+                </a>
               </li>
-              <li
-                class="py-3 px-4 phone-nav-item btn d-flex align-items-center flex-column"
-              >
-                <span class="material-symbols-outlined"> person </span>
-                <span>پروفایل</span>
+              <li>
+                <a
+                  href="./page/login.html"
+                  class="py-3 phone-nav-item btn fs-6 d-flex align-items-center flex-column"
+                >
+                  <span class="material-symbols-outlined"> person </span>
+                  <span>پروفایل</span>
+                </a>
               </li>
             </ul>
           </nav>
